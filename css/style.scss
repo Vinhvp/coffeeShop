@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+
+}
+// color text
+$txt: #fff;
+$bg: #000;
+$txt-ag: rgba(189, 93, 93, 0.884);
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Antonio",sans-serif;
+    font-size: 1.4rem;
+    background: $bg;
+    color: $txt;
+}
+li{
+    list-style: none;
+}
+a{
+    color: unset;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+@mixin flex($align:flex-start, $justify:flex-start, $flex-direc: row,$wrap:no-wrap) {
+    display: flex;
+    flex-wrap: $wrap;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-direc;
+}
+.container{
+    padding: 0 30px;
+}
+.header__wrapper{
+    display: block;
+    color: $txt;
+    font-size: 2rem;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 7rem;
+    &-nav{
+        padding: 2rem 0;
+        box-shadow: 0px 15px 10px -15px rgb(184, 178, 178);
+        @include flex(center, space-around);
+        &-mainmenu{
+            @include flex(center,center);
+            .nav-mainmenu{
+                &-item{
+                    padding: 0 2rem;
+                    &:nth-child(1){
+                        padding-left: 0;
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                }
+                &-link{
+                    transition: color 0.3s ease-in-out;
+                }
+                &-link:hover{
+                    color: $txt-ag;
+                }
+            }
+        }
+        &-menu{
+            @include flex(center,center);
+            font-size: 3rem;
+            .nav-menu{
+                &-item:nth-child(2){
+                    padding: 0 2rem;
+                }
+            }
+        }
+        
+    }
+    
+    
+}
+.header__slider{
+    padding-top: calc(9rem + 1rem + 2rem);
+    @include flex(flex-start,flex-start,row,no-wrap);
+    height: calc(100vh - 7rem);
+    .slider__info{
+        width: 30%;
+    }
+    .slider__box-img{
+        width: 70%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        .slider-wrapper{
+            position: relative;
+            background-color: gray;
+        }
+        .slider-img{
+            overflow: hidden;
+            height: 70rem;
+            width: 70rem;
+        }
+        .slider-img > img{
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+}

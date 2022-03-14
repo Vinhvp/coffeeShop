@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Antonio", sans-serif;
+  font-size: 1.4rem;
+  background: #000;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.header__wrapper {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 7rem;
+}
+.header__wrapper-nav {
+  padding: 2rem 0;
+  box-shadow: 0px 15px 10px -15px #b8b2b2;
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.header__wrapper-nav-mainmenu {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.header__wrapper-nav-mainmenu .nav-mainmenu-item {
+  padding: 0 2rem;
+}
+.header__wrapper-nav-mainmenu .nav-mainmenu-item:nth-child(1) {
+  padding-left: 0;
+}
+.header__wrapper-nav-mainmenu .nav-mainmenu-item:last-child {
+  padding-right: 0;
+}
+.header__wrapper-nav-mainmenu .nav-mainmenu-link {
+  transition: color 0.3s ease-in-out;
+}
+.header__wrapper-nav-mainmenu .nav-mainmenu-link:hover {
+  color: rgba(189, 93, 93, 0.884);
+}
+.header__wrapper-nav-menu {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 3rem;
+}
+.header__wrapper-nav-menu .nav-menu-item:nth-child(2) {
+  padding: 0 2rem;
+}
+
+.header__slider {
+  padding-top: 12rem;
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: calc(100vh - 7rem);
+}
+.header__slider .slider__info {
+  width: 30%;
+}
+.header__slider .slider__box-img {
+  width: 70%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.header__slider .slider__box-img .slider-wrapper {
+  position: relative;
+  background-color: gray;
+}
+.header__slider .slider__box-img .slider-img {
+  overflow: hidden;
+  height: 70rem;
+  width: 70rem;
+}
+.header__slider .slider__box-img .slider-img > img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
